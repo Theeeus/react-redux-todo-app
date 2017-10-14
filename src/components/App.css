@@ -1,0 +1,9 @@
+.row, .col {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+[class*='col-'] {
+    margin: 0 !important;
+    padding: 0 !important;
+}
