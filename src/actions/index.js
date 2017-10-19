@@ -4,12 +4,13 @@ export default class Actions {
 
     static addTodo = (name, isDaily, todos) => {
         var nextTodoId = (todos[todos.length-1].id) + 1;
+        var yesterday = moment().subtract(1,'days');
         var newObj = {
             id: nextTodoId,
             name: name, 
             isDone: false,
             isDaily: isDaily,
-            lastDone: null
+            lastDone: yesterday
         };
         var newTodos = todos;
         newTodos.push(newObj);
