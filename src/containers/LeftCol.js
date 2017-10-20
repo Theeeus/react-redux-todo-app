@@ -11,13 +11,14 @@ class LeftCol extends Component {
         var name = event.target.name.value;
         var isDaily = event.target.checkbox.checked;
         this.props.newTodo(name, isDaily, this.props.todos); //Ver se tem como pegar os todos dentro do actions/index.js
+        document.getElementById("addTodoForm").reset();
     }
 
     render() {
         return (
             <div className="LeftColContainer">
                 <h3>Add new Task</h3>
-                <form onSubmit={this.newTodo.bind(this)}>                      
+                <form onSubmit={this.newTodo.bind(this)} id="addTodoForm">                      
                     <label>
                         <input type="checkbox" name="checkbox" />
                         <span>Repeat daily?</span>
