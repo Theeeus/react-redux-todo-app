@@ -7,7 +7,7 @@ import { Row, Col } from 'react-bootstrap';
 class App extends Component {
   render() {
 
-    //localStorage.removeItem('todos');
+    localStorage.removeItem('todos');
 
     return (
       <div className="app">

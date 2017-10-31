@@ -10,7 +10,8 @@ export default class Actions {
             name: name, 
             isDone: false,
             isDaily: isDaily,
-            lastDone: yesterday
+            lastDone: yesterday,
+            isUrgent: false
         };
         var newTodos = todos;
         newTodos.push(newObj);
@@ -25,6 +26,7 @@ export default class Actions {
         var newTodos = todos.map((item) => {
             if (item.id === todo.id) {
                 item['isDone'] = true;
+                item['isUrgent'] = false;
                 if (item.isDaily) {
                     let today = moment();
                     item['lastDone'] = today;
@@ -47,6 +49,27 @@ export default class Actions {
         localStorage.setItem('todos',JSON.stringify(newTodos));
         return {
             type: 'TODO_REMOVED',
+            payload: newTodos
+        }
+    }
+
+    static highlightTodo = (todo, todos) => {
+        var newTodos = todos.map((item) => {
+            if (item.id === todo.id) {
+                item['isDone'] = false;
+                if (!item.isUrgent) {
+                    item['isUrgent'] = true;
+                } else {
+                    item['isUrgent'] = false;
+                }
+                
+            }
+            
+            return item;          
+        });
+        localStorage.setItem('todos',JSON.stringify(newTodos));
+        return {
+            type: 'TODO_HIGHLIGHTED',
             payload: newTodos
         }
     }

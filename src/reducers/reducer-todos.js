@@ -11,28 +11,32 @@ export default function () {
             name: 'Get my shit together',
             isDone: false,
             isDaily: false,
-        	lastDone: null
+            lastDone: null,
+            isUrgent: false
         },
         {
             id: 1,
             name: 'List my daily todos',
             isDone: false,
             isDaily: false,
-        	lastDone: null
+            lastDone: null,
+            isUrgent: false
         },
         {
             id: 2,
             name: 'This is a daily task',
             isDone: false,
             isDaily: true,
-        	lastDone: null
+            lastDone: null,
+            isUrgent: false
         },
         {
             id: 3,
-            name: 'Daily tasks reset at 6am and turn red when not done for more than a day',
+            name: 'Daily tasks reset at the end of the day',
             isDone: false,
             isDaily: true,
-        	lastDone: null
+            lastDone: null,
+            isUrgent: false
         }
     ];
 
