@@ -62,6 +62,10 @@ export default class Actions {
                 } else {
                     item['isUrgent'] = false;
                 }
+                if (item.isDaily) {
+                    let yesterday = moment().subtract(1,'days');
+                    item['lastDone'] = yesterday;
+                }
                 
             }
             
