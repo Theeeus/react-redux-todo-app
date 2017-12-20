@@ -12,4 +12,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ### Live Site
-  [https://pacific-coast-95447.herokuapp.com](https://pacific-coast-95447.herokuapp.com)
+  [https://theeeus.github.io/react-redux-todo-app/](https://theeeus.github.io/react-redux-todo-app/)
