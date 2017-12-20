@@ -6,6 +6,7 @@
     "react-scripts": "1.0.13"
   },
   "dependencies": {
+    "gh-pages": "^1.1.0",
     "moment": "^2.19.1",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.3",
@@ -16,9 +17,12 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "homepage": "https://Theeeus.github.io/react-redux-todo-app"
 }
